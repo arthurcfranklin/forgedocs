@@ -23,10 +23,10 @@ class HomePage(ctk.CTkFrame):
 
     CATEGORIES = (
         "Todas",
-        "Conversão",
-        "Ferramentas PDF",
-        "Imagens",
-        "OCR",
+        "Converter",
+        "Organizar",
+        "Editar",
+        "Otimizar",
         "Segurança",
     )
 

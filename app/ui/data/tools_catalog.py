@@ -20,7 +20,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Converta documentos Word para PDF "
             "preservando a formatação."
         ),
-        "category": "Conversão",
+        "category": "Converter",
         "action_name": "word_to_pdf",
     },
     {
@@ -29,7 +29,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Converta arquivos PDF em documentos "
             "Word editáveis."
         ),
-        "category": "Conversão",
+        "category": "Converter",
         "action_name": "pdf_to_word",
     },
     {
@@ -37,7 +37,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
         "description": (
             "Converta imagens JPEG em documentos PDF."
         ),
-        "category": "Imagens",
+        "category": "Converter",
         "action_name": "jpeg_to_pdf",
     },
     {
@@ -46,7 +46,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Extraia páginas de arquivos PDF "
             "como imagens JPEG."
         ),
-        "category": "Imagens",
+        "category": "Converter",
         "action_name": "pdf_to_jpeg",
     },
     {
@@ -55,7 +55,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Converta apresentações PowerPoint para PDF "
             "preservando o layout."
         ),
-        "category": "Conversão",
+        "category": "Converter",
         "action_name": "powerpoint_to_pdf",
     },
     {
@@ -64,7 +64,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Converta arquivos PDF em apresentações "
             "PowerPoint editáveis."
         ),
-        "category": "Conversão",
+        "category": "Converter",
         "action_name": "pdf_to_powerpoint",
     },
     {
@@ -73,7 +73,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Converta planilhas Excel para PDF "
             "preservando a estrutura."
         ),
-        "category": "Conversão",
+        "category": "Converter",
         "action_name": "excel_to_pdf",
     },
     {
@@ -82,16 +82,16 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Extraia tabelas de arquivos PDF "
             "para planilhas Excel."
         ),
-        "category": "Conversão",
+        "category": "Converter",
         "action_name": "pdf_to_excel",
     },
     {
-        "title": "Mesclar PDF",
+        "title": "Juntar PDF",
         "description": (
             "Combine vários arquivos PDF "
             "em um único documento."
         ),
-        "category": "Ferramentas PDF",
+        "category": "Organizar",
         "action_name": "merge_pdf",
     },
     {
@@ -100,7 +100,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Separe páginas de um PDF "
             "em novos arquivos."
         ),
-        "category": "Ferramentas PDF",
+        "category": "Organizar",
         "action_name": "split_pdf",
     },
     {
@@ -109,7 +109,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Reduza o tamanho de arquivos PDF "
             "mantendo a qualidade."
         ),
-        "category": "Ferramentas PDF",
+        "category": "Otimizar",
         "action_name": "compress_pdf",
     },
     {
@@ -118,7 +118,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Edite textos, imagens e páginas "
             "de documentos PDF."
         ),
-        "category": "Ferramentas PDF",
+        "category": "Editar",
         "action_name": "edit_pdf",
     },
     {
@@ -145,7 +145,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Reordene, gire ou remova "
             "páginas de um PDF."
         ),
-        "category": "Ferramentas PDF",
+        "category": "Organizar",
         "action_name": "organize_pdf",
     },
     {
@@ -154,7 +154,7 @@ TOOLS: tuple[ToolDefinition, ...] = (
             "Gere uma cópia danificada "
             "para testes."
         ),
-        "category": "Ferramentas PDF",
+        "category": "Segurança",
         "action_name": "corrupt_pdf",
     },
 )
