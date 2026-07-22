@@ -57,27 +57,25 @@ Status: ✅ Concluído
 
 ## Sprint 1 — Documentação
 
-Status: Em andamento
+Status: ✅ Concluído
 
 - [x] Architecture
-- [ ] Roadmap
-- [ ] UI Guidelines
-- [ ] Coding Standards
+- [x] Roadmap
+- [x] UI Guidelines
+- [x] Coding Standards
 
 ---
 
 ## Sprint 2 — Núcleo
 
-Status: Planejado
+Status: Em andamento
 
-Objetivos:
-
-- Estrutura principal da aplicação
-- Classe principal
-- Sistema de configuração
-- Sistema de logs
-- Tratamento de exceções
-- Gerenciamento de caminhos
+- [ ] Estrutura principal da aplicação
+- [ ] Classe principal
+- [ ] Sistema de configuração
+- [ ] Sistema de logs
+- [ ] Tratamento de exceções
+- [ ] Gerenciamento de caminhos
 
 ---
 
@@ -261,6 +259,6 @@ Possíveis funcionalidades para versões posteriores:
 
 Milestone atual: **Foundation**
 
-Sprint atual: **Sprint 1 — Documentação**
+Sprint atual: **Sprint 2 — Núcleo**
 
-Próximo objetivo: **Concluir a documentação técnica e iniciar o desenvolvimento da interface principal.**
+Próximo objetivo: **Implementar os módulos centrais da aplicação, incluindo configuração, constantes, gerenciamento de caminhos, exceções e sistema de logs.**
