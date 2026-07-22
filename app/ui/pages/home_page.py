@@ -1,15 +1,19 @@
+"""Página inicial do ForgeDocs."""
+
 from __future__ import annotations
+
+from collections.abc import Callable
 
 import customtkinter as ctk
 
 from app.ui import theme
 from app.ui.components.category_filter import CategoryFilter
+from app.ui.components.feature_card import FeatureCard
 from app.ui.components.hero_banner import HeroBanner
+from app.ui.data.tools_catalog import TOOLS, ToolDefinition
 from app.ui.typography import (
     body_font,
     body_medium_font,
-    caption_font,
-    display_font,
     section_title_font,
 )
 
@@ -26,6 +30,8 @@ class HomePage(ctk.CTkFrame):
         "Segurança",
     )
 
+    GRID_COLUMNS = 4
+
     def __init__(self, master: ctk.CTkFrame) -> None:
         super().__init__(
             master=master,
@@ -33,16 +39,19 @@ class HomePage(ctk.CTkFrame):
             fg_color=theme.BACKGROUND_PRIMARY,
         )
 
+        self._active_category = "Todas"
+        self._tools_frame: ctk.CTkFrame | None = None
+
         self._configure_layout()
         self._build_page()
 
     def _configure_layout(self) -> None:
-        """Configura o comportamento responsivo da página."""
+        """Configura o comportamento estrutural da página."""
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
 
     def _build_page(self) -> None:
-        """Constrói todos os elementos visuais da página."""
+        """Constrói todas as seções da página inicial."""
         self.content = ctk.CTkScrollableFrame(
             master=self,
             corner_radius=0,
@@ -58,28 +67,45 @@ class HomePage(ctk.CTkFrame):
         self.content.grid_columnconfigure(0, weight=1)
 
         self._build_hero_banner()
-        self._build_category_filter()
         self._build_tools_section()
         self._build_supported_formats_section()
         self._build_recent_activity_section()
 
-    def _build_category_filter(self) -> None:
-        """Constrói a barra de categorias das ferramentas."""
-        section = ctk.CTkFrame(
+    def _build_hero_banner(self) -> None:
+        """Adiciona o banner principal."""
+        self.hero_banner = HeroBanner(master=self.content)
+        self.hero_banner.grid(
+            row=0,
+            column=0,
+            sticky="ew",
+            padx=theme.SPACE_2XL,
+            pady=(theme.SPACE_2XL, theme.SPACE_XL),
+        )
+
+    def _build_tools_section(self) -> None:
+        """Constrói a seção de ferramentas."""
+        self.tools_section = ctk.CTkFrame(
             master=self.content,
             fg_color="transparent",
+            corner_radius=0,
         )
-        section.grid(
+        self.tools_section.grid(
             row=1,
             column=0,
             sticky="ew",
             padx=theme.SPACE_2XL,
             pady=(0, theme.SPACE_XL),
         )
-        section.grid_columnconfigure(0, weight=1)
+        self.tools_section.grid_columnconfigure(0, weight=1)
 
+        self._build_tools_header()
+        self._build_category_filter()
+        self._build_tools_grid()
+
+    def _build_tools_header(self) -> None:
+        """Constrói o título da seção de ferramentas."""
         title = ctk.CTkLabel(
-            master=section,
+            master=self.tools_section,
             text="Ferramentas",
             font=section_title_font(),
             text_color=theme.TEXT_PRIMARY,
@@ -92,70 +118,119 @@ class HomePage(ctk.CTkFrame):
             pady=(0, theme.SPACE_LG),
         )
 
+    def _build_category_filter(self) -> None:
+        """Constrói o filtro de categorias."""
         self.category_filter = CategoryFilter(
-            master=section,
+            master=self.tools_section,
             categories=self.CATEGORIES,
             on_category_change=self._handle_category_change,
+            initial_category=self._active_category,
         )
         self.category_filter.grid(
             row=1,
             column=0,
             sticky="w",
+            padx=(4, 0),
+            pady=(0, theme.SPACE_LG),
         )
 
-    def _build_tools_section(self) -> None:
-        """Constrói a seção provisória de ferramentas."""
-        section = ctk.CTkFrame(
-            master=self.content,
+    def _build_tools_grid(self) -> None:
+        """Cria ou reconstrói a grade de ferramentas."""
+        if self._tools_frame is not None:
+            self._tools_frame.destroy()
+
+        self._tools_frame = ctk.CTkFrame(
+            master=self.tools_section,
             fg_color="transparent",
+            corner_radius=0,
         )
-        section.grid(
+        self._tools_frame.grid(
             row=2,
             column=0,
             sticky="ew",
-            padx=theme.SPACE_2XL,
-            pady=(0, theme.SPACE_XL),
-        )
-        section.grid_columnconfigure((0, 1), weight=1, uniform="tools")
-
-        self._create_tool_placeholder(
-            master=section,
-            row=0,
-            column=0,
-            title="Converter arquivos",
-            description="Converta documentos e imagens entre formatos compatíveis.",
-            status="Disponível em breve",
         )
 
-        self._create_tool_placeholder(
-            master=section,
-            row=0,
-            column=1,
-            title="Organizar PDFs",
-            description="Mescle, divida e reorganize páginas com processamento local.",
-            status="Em desenvolvimento",
+        for column in range(self.GRID_COLUMNS):
+            self._tools_frame.grid_columnconfigure(
+                column,
+                weight=1,
+                uniform="tools",
+            )
+
+        visible_tools = self._get_visible_tools()
+
+        for index, tool in enumerate(visible_tools):
+            self._build_tool_card(
+                tool=tool,
+                index=index,
+            )
+
+    def _build_tool_card(
+        self,
+        tool: ToolDefinition,
+        index: int,
+    ) -> None:
+        """Cria um card individual de ferramenta."""
+        if self._tools_frame is None:
+            return
+
+        row = index // self.GRID_COLUMNS
+        column = index % self.GRID_COLUMNS
+
+        card = FeatureCard(
+            master=self._tools_frame,
+            title=tool["title"],
+            description=tool["description"],
+            action_text="Abrir",
+            command=self._create_tool_command(
+                action_name=tool["action_name"],
+            ),
         )
 
-        self._create_tool_placeholder(
-            master=section,
-            row=1,
-            column=0,
-            title="Comprimir documentos",
-            description="Reduza o tamanho dos arquivos preservando sua qualidade.",
-            status="Planejado",
+        left_padding = 0 if column == 0 else theme.SPACE_SM
+        right_padding = (
+            0
+            if column == self.GRID_COLUMNS - 1
+            else theme.SPACE_SM
         )
 
-        self._create_tool_placeholder(
-            master=section,
-            row=1,
-            column=1,
-            title="Processar imagens",
-            description="Prepare imagens para documentos e fluxos profissionais.",
-            status="Planejado",
+        card.grid(
+            row=row,
+            column=column,
+            sticky="nsew",
+            padx=(left_padding, right_padding),
+            pady=(0, theme.SPACE_LG),
         )
+
+    def _get_visible_tools(self) -> tuple[ToolDefinition, ...]:
+        """Retorna as ferramentas da categoria selecionada."""
+        if self._active_category == "Todas":
+            return TOOLS
+
+        return tuple(
+            tool
+            for tool in TOOLS
+            if tool["category"] == self._active_category
+        )
+
+    def _create_tool_command(
+        self,
+        action_name: str,
+    ) -> Callable[[], None]:
+        """Cria o callback de abertura de uma ferramenta."""
+        return lambda: self._handle_tool_open(action_name)
+
+    def _handle_category_change(self, category: str) -> None:
+        """Atualiza os cards conforme a categoria selecionada."""
+        self._active_category = category
+        self._build_tools_grid()
+
+    def _handle_tool_open(self, action_name: str) -> None:
+        """Recebe temporariamente a ferramenta selecionada."""
+        print(f"Abrir ferramenta: {action_name}")
 
     def _build_supported_formats_section(self) -> None:
-        """Constrói a área de formatos previstos."""
+        """Constrói a seção de formatos suportados."""
         section = ctk.CTkFrame(
             master=self.content,
             corner_radius=theme.RADIUS_LARGE,
@@ -164,7 +239,7 @@ class HomePage(ctk.CTkFrame):
             border_color=theme.BORDER_DEFAULT,
         )
         section.grid(
-            row=3,
+            row=2,
             column=0,
             sticky="ew",
             padx=theme.SPACE_2XL,
@@ -204,6 +279,7 @@ class HomePage(ctk.CTkFrame):
         formats_frame = ctk.CTkFrame(
             master=section,
             fg_color="transparent",
+            corner_radius=0,
         )
         formats_frame.grid(
             row=2,
@@ -213,7 +289,18 @@ class HomePage(ctk.CTkFrame):
             pady=(theme.SPACE_LG, theme.SPACE_XL),
         )
 
-        formats = ("PDF", "DOCX", "XLSX", "PPTX", "PNG", "JPG")
+        formats = (
+            "PDF",
+            "DOC",
+            "DOCX",
+            "XLS",
+            "XLSX",
+            "PPT",
+            "PPTX",
+            "JPEG",
+            "JPG",
+            "PNG",
+        )
 
         for index, file_format in enumerate(formats):
             label = ctk.CTkLabel(
@@ -233,7 +320,7 @@ class HomePage(ctk.CTkFrame):
             )
 
     def _build_recent_activity_section(self) -> None:
-        """Constrói o estado vazio da atividade recente."""
+        """Constrói a seção de atividade recente."""
         section = ctk.CTkFrame(
             master=self.content,
             corner_radius=theme.RADIUS_LARGE,
@@ -242,7 +329,7 @@ class HomePage(ctk.CTkFrame):
             border_color=theme.BORDER_DEFAULT,
         )
         section.grid(
-            row=4,
+            row=3,
             column=0,
             sticky="ew",
             padx=theme.SPACE_2XL,
@@ -279,7 +366,10 @@ class HomePage(ctk.CTkFrame):
 
         empty_description = ctk.CTkLabel(
             master=section,
-            text="As operações concluídas aparecerão aqui para consulta rápida.",
+            text=(
+                "As operações concluídas aparecerão aqui "
+                "para consulta rápida."
+            ),
             font=body_font(),
             text_color=theme.TEXT_MUTED,
         )
@@ -288,99 +378,3 @@ class HomePage(ctk.CTkFrame):
             column=0,
             pady=(0, theme.SPACE_2XL),
         )
-
-    def _handle_category_change(self, category: str) -> None:
-        """Recebe temporariamente a categoria selecionada."""
-        print(f"Categoria selecionada: {category}")
-
-    def _create_tool_placeholder(
-        self,
-        master: ctk.CTkFrame,
-        row: int,
-        column: int,
-        title: str,
-        description: str,
-        status: str,
-    ) -> None:
-        """Cria um card provisório para uma ferramenta."""
-        card = ctk.CTkFrame(
-            master=master,
-            height=theme.CARD_MIN_HEIGHT,
-            corner_radius=theme.RADIUS_LARGE,
-            fg_color=theme.SURFACE_DEFAULT,
-            border_width=1,
-            border_color=theme.BORDER_DEFAULT,
-        )
-        card.grid(
-            row=row,
-            column=column,
-            sticky="nsew",
-            padx=(
-                0 if column == 0 else theme.SPACE_SM,
-                theme.SPACE_SM if column == 0 else 0,
-            ),
-            pady=(0, theme.SPACE_LG),
-        )
-        card.grid_propagate(False)
-        card.grid_columnconfigure(0, weight=1)
-
-        status_label = ctk.CTkLabel(
-            master=card,
-            text=status,
-            font=caption_font(),
-            text_color=theme.ACCENT_HOVER,
-            fg_color=theme.ACCENT_SOFT,
-            corner_radius=theme.RADIUS_SMALL,
-            height=28,
-        )
-        status_label.grid(
-            row=0,
-            column=0,
-            sticky="w",
-            padx=theme.SPACE_XL,
-            pady=(theme.SPACE_XL, theme.SPACE_LG),
-        )
-
-        title_label = ctk.CTkLabel(
-            master=card,
-            text=title,
-            font=section_title_font(),
-            text_color=theme.TEXT_PRIMARY,
-            anchor="w",
-        )
-        title_label.grid(
-            row=1,
-            column=0,
-            sticky="w",
-            padx=theme.SPACE_XL,
-        )
-
-        description_label = ctk.CTkLabel(
-            master=card,
-            text=description,
-            font=body_font(),
-            text_color=theme.TEXT_SECONDARY,
-            justify="left",
-            anchor="w",
-            wraplength=390,
-        )
-        description_label.grid(
-            row=2,
-            column=0,
-            sticky="w",
-            padx=theme.SPACE_XL,
-            pady=(theme.SPACE_SM, theme.SPACE_XL),
-        )
-
-    def _build_hero_banner(self) -> None:
-        """Insere o banner principal na página."""
-        self.hero_banner = HeroBanner(
-            master=self.content,
-        )
-        self.hero_banner.grid(
-            row=0,
-            column=0,
-            sticky="ew",
-            padx=theme.SPACE_2XL,
-            pady=(theme.SPACE_2XL, theme.SPACE_XL),
-    )

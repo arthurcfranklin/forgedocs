@@ -77,7 +77,7 @@ class CategoryFilter(ctk.CTkFrame):
             button.grid(
                 row=0,
                 column=column,
-                padx=(0, 6),
+                padx=(0, 12),
             )
 
             self._buttons[category] = button

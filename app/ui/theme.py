@@ -64,4 +64,4 @@ SPACE_3XL: Final[int] = 48
 SIDEBAR_WIDTH: Final[int] = 280
 STATUS_BAR_HEIGHT: Final[int] = 42
 CONTENT_MAX_WIDTH: Final[int] = 1180
-CARD_MIN_HEIGHT: Final[int] = 170
+CARD_MIN_HEIGHT: Final[int] = 230
