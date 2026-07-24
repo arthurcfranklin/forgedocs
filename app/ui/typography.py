@@ -1,13 +1,10 @@
 """Definições tipográficas da interface do ForgeDocs."""
 
-from __future__ import annotations
-
 from functools import lru_cache
 from pathlib import Path
 from typing import Final
 
 import customtkinter as ctk
-
 
 FONT_FAMILY_LIGHT: Final[str] = "Host Grotesk Light"
 FONT_FAMILY_REGULAR: Final[str] = "Host Grotesk"
@@ -20,12 +17,7 @@ FONT_FAMILY_MONOSPACE: Final[str] = "Cascadia Code"
 
 PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parents[2]
 
-FONTS_DIRECTORY: Final[Path] = (
-    PROJECT_ROOT
-    / "assets"
-    / "fonts"
-    / "HostGrotesk"
-)
+FONTS_DIRECTORY: Final[Path] = PROJECT_ROOT / "assets" / "fonts" / "HostGrotesk"
 
 FONT_FILES: Final[tuple[str, ...]] = (
     "hostgrotesk-light.ttf",
@@ -59,9 +51,7 @@ def load_application_fonts() -> None:
     if missing_fonts:
         missing_list = ", ".join(missing_fonts)
 
-        raise FileNotFoundError(
-            f"Arquivos de fonte não encontrados: {missing_list}"
-        )
+        raise FileNotFoundError(f"Arquivos de fonte não encontrados: {missing_list}")
 
 
 @lru_cache(maxsize=1)
