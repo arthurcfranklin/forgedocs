@@ -1,16 +1,36 @@
-from __future__ import annotations
-
 from collections.abc import Callable
+from typing import TypedDict
 
 import customtkinter as ctk
 
 from app.ui import theme
+from app.ui.data.tools.types import ToolStatus
 from app.ui.typography import (
     body_font,
     button_font,
     caption_font,
     section_title_font,
 )
+
+class ToolStatusConfig(TypedDict):
+    """Configuração visual e funcional de um estado de ferramenta."""
+
+    badge_text: str | None
+    enabled: bool
+
+
+
+TOOL_STATUS_CONFIG: dict[ToolStatus, ToolStatusConfig] = {
+    ToolStatus.AVAILABLE: {
+        "badge_text": None,
+        "enabled": True,
+    },
+    ToolStatus.COMING_SOON: {
+        "badge_text": "Em breve",
+        "enabled": False,
+    },
+}
+
 
 
 class FeatureCard(ctk.CTkFrame):
@@ -25,6 +45,7 @@ class FeatureCard(ctk.CTkFrame):
         action_text: str = "Abrir",
         command: Callable[[], None] | None = None,
         accent_color: str | None = None,
+        status: ToolStatus = ToolStatus.AVAILABLE,
         **kwargs,
     ) -> None:
         super().__init__(
@@ -37,13 +58,12 @@ class FeatureCard(ctk.CTkFrame):
             **kwargs,
         )
 
-        self.grid_propagate(False)
-
         self.title = title
         self.description = description
         self.action_text = action_text
         self.command = command
         self.accent_color = accent_color or theme.ACCENT_PRIMARY
+        self.status = status
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(1, weight=1)
@@ -51,6 +71,21 @@ class FeatureCard(ctk.CTkFrame):
 
         self._build_accent()
         self._build_content()
+
+    @property
+    def status_config(self) -> ToolStatusConfig:
+        """Retorna a configuração associada ao estado atual."""
+        return TOOL_STATUS_CONFIG[self.status]
+
+    @property
+    def is_available(self) -> bool:
+        """Indica se a ferramenta pode ser utilizada."""
+        return self.status_config["enabled"]
+
+    @property
+    def status_text(self) -> str | None:
+        """Retorna o texto visual associado ao estado."""
+        return self.status_config["badge_text"]
 
     def _build_accent(self) -> None:
         """Cria a barra superior de destaque."""
@@ -85,8 +120,20 @@ class FeatureCard(ctk.CTkFrame):
         content.grid_columnconfigure(0, weight=1)
         content.grid_rowconfigure(1, weight=1)
 
-        title_label = ctk.CTkLabel(
+        header = ctk.CTkFrame(
             content,
+            fg_color="transparent",
+        )
+        header.grid(
+            row=0,
+            column=0,
+            sticky="ew",
+            pady=(0, theme.SPACE_MD),
+        )
+        header.grid_columnconfigure(0, weight=1)
+
+        title_label = ctk.CTkLabel(
+            header,
             text=self.title,
             font=section_title_font(),
             text_color=theme.TEXT_PRIMARY,
@@ -97,9 +144,26 @@ class FeatureCard(ctk.CTkFrame):
         title_label.grid(
             row=0,
             column=0,
-            sticky="ew",
-            pady=(0, theme.SPACE_MD),
+            sticky="w",
         )
+
+        if self.status_text is not None:
+            status_badge = ctk.CTkLabel(
+                header,
+                text=self.status_text,
+                font=caption_font(),
+                text_color=theme.TEXT_SECONDARY,
+                fg_color=theme.SURFACE_HOVER,
+                corner_radius=theme.RADIUS_SMALL,
+                padx=8,
+                pady=2,
+            )
+            status_badge.grid(
+                row=0,
+                column=1,
+                sticky="e",
+                padx=(theme.SPACE_MD, 0),
+            )
 
         description_label = ctk.CTkLabel(
             content,
@@ -121,6 +185,7 @@ class FeatureCard(ctk.CTkFrame):
             content,
             text=self.action_text,
             command=self._handle_action,
+            state="normal" if self.is_available else "disabled",
             font=button_font(),
             width=96,
             height=32,
@@ -138,6 +203,9 @@ class FeatureCard(ctk.CTkFrame):
         )
 
     def _handle_action(self) -> None:
-        """Executa a ação vinculada ao card."""
+        """Executa a ação vinculada ao card quando disponível."""
+        if not self.is_available:
+            return
+
         if self.command is not None:
             self.command()

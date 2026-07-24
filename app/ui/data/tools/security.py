@@ -1,6 +1,5 @@
 """Ferramentas da categoria Segurança."""
 
-from __future__ import annotations
 from app.ui.data.tools.types import ToolDefinition
 
 SECURITY_TOOLS: tuple[ToolDefinition, ...] = (

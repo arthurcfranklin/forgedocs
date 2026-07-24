@@ -2,7 +2,15 @@
 
 from __future__ import annotations
 
-from typing import TypedDict
+from enum import StrEnum
+from typing import NotRequired, TypedDict
+
+
+class ToolStatus(StrEnum):
+    """Estados possíveis de uma ferramenta."""
+
+    AVAILABLE = "available"
+    COMING_SOON = "coming_soon"
 
 
 class ToolDefinition(TypedDict):
@@ -12,3 +20,4 @@ class ToolDefinition(TypedDict):
     description: str
     category: str
     action_name: str
+    status: NotRequired[ToolStatus]

@@ -1,10 +1,9 @@
 """Ferramentas da categoria Converter."""
 
-from __future__ import annotations
-from app.ui.data.tools.types import ToolDefinition
+from app.ui.data.tools.types import ToolDefinition, ToolStatus
 
 CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
-        {
+    {
         "title": "Word → PDF",
         "description": (
             "Converta documentos Word para PDF "
@@ -47,6 +46,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "powerpoint_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → PowerPoint",
@@ -56,6 +56,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_powerpoint",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "Excel → PDF",
@@ -65,6 +66,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "excel_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → Excel",
@@ -74,8 +76,9 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_excel",
+        "status": ToolStatus.COMING_SOON,
     },
-        {
+    {
         "title": "CSV → PDF",
         "description": (
             "Converta arquivos CSV em documentos PDF "
@@ -83,6 +86,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "csv_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "HTML → PDF",
@@ -92,6 +96,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "html_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "EPUB → PDF",
@@ -101,6 +106,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "epub_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → EPUB",
@@ -110,6 +116,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_epub",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PNG → PDF",
@@ -119,6 +126,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "png_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → PNG",
@@ -128,6 +136,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_png",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "WEBP → PDF",
@@ -137,6 +146,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "webp_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → WEBP",
@@ -146,6 +156,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_webp",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "TIFF → PDF",
@@ -155,6 +166,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "tiff_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → TIFF",
@@ -164,6 +176,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_tiff",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "BMP → PDF",
@@ -173,6 +186,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "bmp_to_pdf",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → BMP",
@@ -182,6 +196,7 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_bmp",
+        "status": ToolStatus.COMING_SOON,
     },
     {
         "title": "PDF → PDF/A",
@@ -191,5 +206,6 @@ CONVERTER_TOOLS: tuple[ToolDefinition, ...] = (
         ),
         "category": "Converter",
         "action_name": "pdf_to_pdfa",
+        "status": ToolStatus.COMING_SOON,
     },
 )

@@ -1,31 +1,27 @@
 """Página inicial do ForgeDocs."""
 
-from __future__ import annotations
 from collections.abc import Callable
+
 import customtkinter as ctk
+
 from app.ui import theme
 from app.ui.components.category_filter import CategoryFilter
 from app.ui.components.feature_card import FeatureCard
 from app.ui.components.hero_banner import HeroBanner
-from app.ui.data.tools import TOOLS, ToolDefinition
+from app.ui.data.tools import (
+    TOOLS,
+    TOOL_CATEGORIES,
+    ToolDefinition,
+    ToolStatus,
+)
 from app.ui.typography import (
     body_font,
     body_medium_font,
     section_title_font,
 )
 
-
 class HomePage(ctk.CTkFrame):
     """Página inicial do ForgeDocs."""
-
-    CATEGORIES = (
-        "Todas",
-        "Converter",
-        "Organizar",
-        "Editar",
-        "Otimizar",
-        "Segurança",
-    )
 
     GRID_COLUMNS = 4
 
@@ -119,7 +115,7 @@ class HomePage(ctk.CTkFrame):
         """Constrói o filtro de categorias."""
         self.category_filter = CategoryFilter(
             master=self.tools_section,
-            categories=self.CATEGORIES,
+            categories=TOOL_CATEGORIES,
             on_category_change=self._handle_category_change,
             initial_category=self._active_category,
         )
@@ -179,6 +175,7 @@ class HomePage(ctk.CTkFrame):
             title=tool["title"],
             description=tool["description"],
             action_text="Abrir",
+            status=tool.get("status", ToolStatus.AVAILABLE),
             command=self._create_tool_command(
                 action_name=tool["action_name"],
             ),
