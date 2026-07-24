@@ -2,34 +2,55 @@
 
 ## Objetivo
 
-Este documento descreve o planejamento estratégico do ForgeDocs, organizando a evolução do projeto em marcos (Milestones) e Sprints.
+Este documento define o planejamento estratégico do ForgeDocs, organizando sua evolução em Milestones e Sprints.
 
-O roadmap serve como referência para o desenvolvimento, permitindo acompanhar o progresso, definir prioridades e manter uma visão clara da evolução do software.
+Seu objetivo é servir como referência para o desenvolvimento, acompanhar o progresso do projeto e estabelecer prioridades para cada etapa da evolução da aplicação.
 
 ---
 
 # Visão Geral
 
-Status atual:
-
-- Versão: **v0.1.0-alpha**
-- Fase: **Foundation**
-- Plataforma alvo: Windows
-- Licença: MIT
+| Item | Valor |
+|------|-------|
+| Versão atual | **v0.1.0-alpha** |
+| Status | Em desenvolvimento ativo |
+| Milestone atual | Foundation |
+| Plataforma alvo | Windows |
+| Licença | MIT |
 
 ---
 
-# Estrutura de versões
+# Filosofia de Desenvolvimento
 
-| Versão | Status | Objetivo |
-|---------|--------|----------|
-| v0.1.0-alpha | Em desenvolvimento | Fundação do projeto |
-| v0.2.0-alpha | Planejado | Interface principal |
-| v0.3.0-alpha | Planejado | Conversão de documentos |
-| v0.4.0-alpha | Planejado | Organização de PDFs |
-| v0.5.0-alpha | Planejado | Recursos avançados |
-| v0.9.0-beta | Planejado | Estabilização |
-| v1.0.0 | Planejado | Primeira versão estável |
+O ForgeDocs será desenvolvido de forma incremental.
+
+Cada versão deverá entregar um conjunto coeso de funcionalidades, mantendo uma arquitetura sólida, interface consistente e código preparado para evolução contínua.
+
+A prioridade do projeto segue a seguinte ordem:
+
+1. Arquitetura
+2. Interface
+3. Experiência do usuário
+4. Funcionalidades
+5. Otimização
+6. Estabilidade
+
+---
+
+# Roadmap de Versões
+
+| Versão | Objetivo |
+|---------|----------|
+| v0.1.0-alpha | Foundation |
+| v0.2.0-alpha | UI Complete |
+| v0.3.0-alpha | Core Features |
+| v0.4.0-alpha | Document Conversion |
+| v0.5.0-alpha | PDF Suite |
+| v0.6.0-alpha | Optimization |
+| v0.7.0-alpha | Security |
+| v0.8.0-alpha | User Experience |
+| v0.9.0-beta | Stabilization |
+| v1.0.0 | Stable Release |
 
 ---
 
@@ -37,93 +58,125 @@ Status atual:
 
 Objetivo:
 
-Construir toda a base técnica do ForgeDocs.
+Construir toda a base arquitetural, visual e organizacional do ForgeDocs.
 
-## Sprint 0 — Inicialização
+---
 
-Status: ✅ Concluído
+## Sprint 0 — Projeto
 
-- [x] Criar repositório
-- [x] Configurar Git
-- [x] Configurar GitHub
-- [x] Estruturar diretórios
-- [x] Criar ambiente virtual
-- [x] Configurar .gitignore
-- [x] Configurar requirements
-- [x] Criar README
-- [x] Definir licença MIT
+**Status:** ✅ Concluído
+
+- [x] Repositório Git
+- [x] GitHub
+- [x] Estrutura inicial
+- [x] Ambiente virtual
+- [x] .gitignore
+- [x] requirements.txt
+- [x] README inicial
+- [x] Licença MIT
 
 ---
 
 ## Sprint 1 — Documentação
 
-Status: ✅ Concluído
+**Status:** ✅ Concluído
 
-- [x] Architecture
-- [x] Roadmap
-- [x] UI Guidelines
-- [x] Coding Standards
-
----
-
-## Sprint 2 — Núcleo
-
-Status: Em andamento
-
-- [ ] Estrutura principal da aplicação
-- [ ] Classe principal
-- [ ] Sistema de configuração
-- [ ] Sistema de logs
-- [ ] Tratamento de exceções
-- [ ] Gerenciamento de caminhos
+- [x] architecture.md
+- [x] roadmap.md
+- [x] coding-standards.md
+- [x] ui-guidelines.md
 
 ---
 
-## Sprint 3 — Interface Base
+## Sprint 2 — Core Architecture
 
-Status: Planejado
+**Status:** ✅ Concluído
 
-Objetivos:
+### Aplicação
 
-- Janela principal
-- Sidebar
-- Header
-- Área de conteúdo
-- Navegação
-- Sistema de páginas
+- [x] Estrutura principal
+- [x] Classe principal
 
----
+### Core
 
-## Sprint 4 — Sistema Visual
+- [x] Sistema de configuração
+- [x] Sistema de logs
+- [x] Tratamento de exceções
+- [x] Gerenciamento de caminhos
 
-Status: Planejado
+### Organização
 
-Objetivos:
-
-- Tema escuro
-- Componentes reutilizáveis
-- Paleta de cores
-- Tipografia
-- Espaçamentos
-- Ícones
+- [x] Arquitetura modular
+- [x] Organização dos módulos
+- [x] Estrutura de diretórios
 
 ---
 
-# Milestone 2 — Conversão
+## Sprint 3 — UI Foundation
+
+**Status:** Em andamento
+
+### Interface
+
+- [x] Janela principal
+- [x] Home Page
+- [x] Tema escuro
+
+### Componentes
+
+- [x] FeatureCard
+- [x] CategoryFilter
+- [x] ToolStatus
+- [x] Catálogo de ferramentas
+- [x] Sistema de categorias
+
+### Pendências
+
+- [ ] Sidebar
+- [ ] Sistema de navegação
+- [ ] Branding
+- [ ] Página Sobre
+- [ ] Página Configurações
+- [ ] Screenshot oficial
+- [ ] Release v0.1.0-alpha
+
+---
+
+# Milestone 2 — Core Features
 
 Objetivo:
 
-Disponibilizar ferramentas de conversão.
+Construir toda a infraestrutura necessária para execução das ferramentas.
+
+## Sprint 4
+
+Planejado
+
+- Dispatcher
+- Sistema de execução
+- Janela de progresso
+- Tratamento de erros
+- Arquitetura de serviços
+- Integração entre UI e Services
+
+---
+
+# Milestone 3 — Document Conversion
+
+Objetivo:
+
+Implementar as ferramentas de conversão de documentos.
 
 ## Sprint 5
 
 Planejado
 
-Ferramentas:
+### Conversões
 
 - Word → PDF
-- Excel → PDF
-- PowerPoint → PDF
+- PDF → Word
+- JPEG → PDF
+- PDF → JPEG
 
 ---
 
@@ -131,93 +184,109 @@ Ferramentas:
 
 Planejado
 
-Ferramentas:
+### Conversões adicionais
 
-- Imagem → PDF
+- Excel → PDF
+- PowerPoint → PDF
 - Markdown → PDF
+- HTML → PDF
+- EPUB → PDF
+- CSV → PDF
 
 ---
 
-# Milestone 3 — Organização de PDFs
+# Milestone 4 — PDF Suite
 
 Objetivo:
 
-Criar uma suíte de manipulação de PDFs.
+Disponibilizar recursos completos de manipulação de PDFs.
 
-Planejado:
+Planejado
 
-- Mesclar
-- Dividir
+### Organização
+
+- Mesclar PDFs
+- Dividir PDFs
 - Extrair páginas
-- Reordenar
-- Rotacionar
+- Reordenar páginas
+- Rotacionar páginas
 - Remover páginas
+- Recortar páginas
+
+### Edição
+
+- Inserir marca d'água
+- Cabeçalho e rodapé
+- Numeração de páginas
 
 ---
 
-# Milestone 4 — Otimização
+# Milestone 5 — Optimization
+
+Objetivo:
+
+Melhorar desempenho e tamanho dos documentos.
 
 Planejado
 
-Ferramentas:
-
-- Compressão
-- Otimização de imagens
-- Redução de tamanho
-
----
-
-# Milestone 5 — OCR
-
-Planejado
-
-Ferramentas:
-
+- Compressão de PDFs
+- Compressão de imagens
 - OCR
-- Pesquisa em PDFs digitalizados
+- Reparação de PDFs
+- PDF/A
 
 ---
 
-# Milestone 6 — Segurança
+# Milestone 6 — Security
+
+Objetivo:
+
+Adicionar recursos de segurança e proteção.
 
 Planejado
 
-Ferramentas:
-
-- Senha
+- Proteger PDF
 - Remover senha
-- Marca d'água
+- Redação de conteúdo
+- Comparar documentos
 - Assinatura digital
+- Gerar PDF corrompido (testes)
 
 ---
 
-# Milestone 7 — Experiência do Usuário
+# Milestone 7 — User Experience
+
+Objetivo:
+
+Melhorar a experiência de utilização da aplicação.
 
 Planejado
-
-Melhorias:
 
 - Configurações
 - Histórico
+- Recentes
 - Barra de progresso
 - Notificações
 - Atualizações de interface
+- Preferências
+- Persistência de configurações
 
 ---
 
-# Milestone 8 — Release Candidate
+# Milestone 8 — Beta
 
 Objetivo:
 
-Preparação para a primeira versão pública.
+Preparação para lançamento da versão beta.
 
-Itens:
+Planejado
 
-- Testes
-- Correções
-- Documentação
-- Empacotamento
+- Testes completos
+- Correção de bugs
 - Otimizações
+- Empacotamento
+- Documentação final
+- Instalação
 
 ---
 
@@ -225,40 +294,66 @@ Itens:
 
 Critérios para lançamento
 
-- Interface completa
-- Recursos principais implementados
-- Testes realizados
-- Documentação atualizada
-- Empacotamento funcional
+- Interface finalizada
+- Funcionalidades principais implementadas
+- Testes concluídos
+- Documentação completa
+- Instalador funcional
 - Estabilidade validada
 
 ---
 
-# Ideias futuras
+# Ideias Futuras
 
-Possíveis funcionalidades para versões posteriores:
+Possíveis funcionalidades para versões posteriores.
+
+### Arquitetura
 
 - Sistema de plugins
+- API pública
+
+### Produtividade
+
 - Processamento em lote
-- Assinatura eletrônica avançada
-- Novos formatos de documentos
-- Internacionalização
-- Suporte multiplataforma
+- Fila de tarefas
+- Histórico avançado
+
+### Compatibilidade
+
+- Linux
+- macOS
+
+### Internacionalização
+
+- Português
+- Inglês
+- Espanhol
 
 ---
 
-# Histórico de evolução
+# Histórico
 
 | Data | Versão | Alteração |
 |------|---------|-----------|
-| Julho/2026 | v0.1.0-alpha | Início do projeto |
+| Julho/2026 | v0.1.0-alpha | Criação do projeto |
+| Julho/2026 | v0.1.0-alpha | Foundation em desenvolvimento |
 
 ---
 
-# Status Atual do Projeto
+# Status Atual
 
-Milestone atual: **Foundation**
+**Versão**
 
-Sprint atual: **Sprint 2 — Núcleo**
+v0.1.0-alpha
 
-Próximo objetivo: **Implementar os módulos centrais da aplicação, incluindo configuração, constantes, gerenciamento de caminhos, exceções e sistema de logs.**
+**Milestone**
+
+Foundation
+
+**Sprint**
+
+Sprint 3 — UI Foundation
+
+**Próximo objetivo**
+
+Implementar a Sidebar, concluir o sistema de navegação, finalizar o branding da aplicação e registrar a primeira screenshot oficial do ForgeDocs para encerramento da Foundation e lançamento da versão v0.1.0-alpha.
