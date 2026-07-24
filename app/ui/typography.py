@@ -9,17 +9,37 @@ from typing import Final
 import customtkinter as ctk
 
 
-FONT_FAMILY: Final[str] = "Host Grotesk"
+FONT_FAMILY_LIGHT: Final[str] = "Host Grotesk Light"
+FONT_FAMILY_REGULAR: Final[str] = "Host Grotesk"
+FONT_FAMILY_MEDIUM: Final[str] = "Host Grotesk Medium"
+FONT_FAMILY_SEMIBOLD: Final[str] = "Host Grotesk SemiBold"
+FONT_FAMILY_BOLD: Final[str] = "Host Grotesk"
+FONT_FAMILY_EXTRABOLD: Final[str] = "Host Grotesk ExtraBold"
+
 FONT_FAMILY_MONOSPACE: Final[str] = "Cascadia Code"
 
 PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parents[2]
-FONTS_DIRECTORY: Final[Path] = PROJECT_ROOT / "assets" / "fonts"
+
+FONTS_DIRECTORY: Final[Path] = (
+    PROJECT_ROOT
+    / "assets"
+    / "fonts"
+    / "HostGrotesk"
+)
 
 FONT_FILES: Final[tuple[str, ...]] = (
+    "hostgrotesk-light.ttf",
+    "hostgrotesk-light-italic.ttf",
     "hostgrotesk-regular.ttf",
+    "hostgrotesk-italic.ttf",
     "hostgrotesk-medium.ttf",
+    "hostgrotesk-medium-italic.ttf",
     "hostgrotesk-semibold.ttf",
+    "hostgrotesk-semibold-italic.ttf",
     "hostgrotesk-bold.ttf",
+    "hostgrotesk-bold-italic.ttf",
+    "hostgrotesk-extrabold.ttf",
+    "hostgrotesk-extrabold-italic.ttf",
 )
 
 
@@ -45,10 +65,20 @@ def load_application_fonts() -> None:
 
 
 @lru_cache(maxsize=1)
-def display_font() -> ctk.CTkFont:
-    """Fonte principal para títulos de maior destaque."""
+def hero_title_font() -> ctk.CTkFont:
+    """Fonte utilizada no título principal do Hero."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_EXTRABOLD,
+        size=44,
+        weight="normal",
+    )
+
+
+@lru_cache(maxsize=1)
+def display_font() -> ctk.CTkFont:
+    """Fonte utilizada em títulos de grande destaque."""
+    return ctk.CTkFont(
+        family=FONT_FAMILY_BOLD,
         size=36,
         weight="bold",
     )
@@ -56,9 +86,9 @@ def display_font() -> ctk.CTkFont:
 
 @lru_cache(maxsize=1)
 def page_title_font() -> ctk.CTkFont:
-    """Fonte utilizada nos títulos das páginas."""
+    """Fonte utilizada nos títulos principais das páginas."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_BOLD,
         size=26,
         weight="bold",
     )
@@ -68,17 +98,17 @@ def page_title_font() -> ctk.CTkFont:
 def section_title_font() -> ctk.CTkFont:
     """Fonte utilizada nos títulos de seções e cards."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_SEMIBOLD,
         size=18,
-        weight="bold",
+        weight="normal",
     )
 
 
 @lru_cache(maxsize=1)
 def body_font() -> ctk.CTkFont:
-    """Fonte padrão para textos da interface."""
+    """Fonte padrão utilizada nos textos da interface."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_REGULAR,
         size=16,
         weight="normal",
     )
@@ -86,19 +116,19 @@ def body_font() -> ctk.CTkFont:
 
 @lru_cache(maxsize=1)
 def body_medium_font() -> ctk.CTkFont:
-    """Fonte intermediária para textos com maior ênfase."""
+    """Fonte utilizada em textos com ênfase intermediária."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_MEDIUM,
         size=15,
-        weight="bold",
+        weight="normal",
     )
 
 
 @lru_cache(maxsize=1)
 def caption_font() -> ctk.CTkFont:
-    """Fonte para legendas, metadados e textos auxiliares."""
+    """Fonte utilizada em legendas, metadados e textos auxiliares."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_MEDIUM,
         size=13,
         weight="normal",
     )
@@ -108,9 +138,9 @@ def caption_font() -> ctk.CTkFont:
 def button_font() -> ctk.CTkFont:
     """Fonte utilizada nos botões."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_SEMIBOLD,
         size=14,
-        weight="bold",
+        weight="normal",
     )
 
 
@@ -118,7 +148,7 @@ def button_font() -> ctk.CTkFont:
 def navigation_font() -> ctk.CTkFont:
     """Fonte utilizada nos itens de navegação."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_MEDIUM,
         size=14,
         weight="normal",
     )
@@ -128,9 +158,9 @@ def navigation_font() -> ctk.CTkFont:
 def navigation_active_font() -> ctk.CTkFont:
     """Fonte utilizada no item de navegação ativo."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_SEMIBOLD,
         size=14,
-        weight="bold",
+        weight="normal",
     )
 
 
@@ -138,7 +168,7 @@ def navigation_active_font() -> ctk.CTkFont:
 def brand_font() -> ctk.CTkFont:
     """Fonte utilizada na identidade textual do ForgeDocs."""
     return ctk.CTkFont(
-        family=FONT_FAMILY,
+        family=FONT_FAMILY_BOLD,
         size=20,
         weight="bold",
     )
@@ -146,7 +176,7 @@ def brand_font() -> ctk.CTkFont:
 
 @lru_cache(maxsize=1)
 def monospace_font() -> ctk.CTkFont:
-    """Fonte monoespaçada para extensões e informações técnicas."""
+    """Fonte monoespaçada utilizada em informações técnicas."""
     return ctk.CTkFont(
         family=FONT_FAMILY_MONOSPACE,
         size=12,

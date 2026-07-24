@@ -5,9 +5,8 @@ import customtkinter as ctk
 from app.ui import theme
 from app.ui.typography import (
     body_font,
-    body_medium_font,
     caption_font,
-    display_font,
+    hero_title_font,
     section_title_font,
 )
 
@@ -70,7 +69,7 @@ class HeroBanner(ctk.CTkFrame):
         title = ctk.CTkLabel(
             master=content,
             text="Documentos profissionais.\nPrivados por padrão.",
-            font=display_font(),
+            font=hero_title_font(),
             text_color=theme.TEXT_PRIMARY,
             justify="left",
             anchor="w",
