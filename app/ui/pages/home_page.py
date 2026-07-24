@@ -1,16 +1,13 @@
 """Página inicial do ForgeDocs."""
 
 from __future__ import annotations
-
 from collections.abc import Callable
-
 import customtkinter as ctk
-
 from app.ui import theme
 from app.ui.components.category_filter import CategoryFilter
 from app.ui.components.feature_card import FeatureCard
 from app.ui.components.hero_banner import HeroBanner
-from app.ui.data.tools_catalog import TOOLS, ToolDefinition
+from app.ui.data.tools import TOOLS, ToolDefinition
 from app.ui.typography import (
     body_font,
     body_medium_font,
