@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from typing import Final
 
 
@@ -17,6 +18,7 @@ SURFACE_ACTIVE: Final[str] = "#252E39"
 BORDER_DEFAULT: Final[str] = "#242C35"
 BORDER_SUBTLE: Final[str] = "#1B222A"
 BORDER_FOCUS: Final[str] = "#5B8CFF"
+DIVIDER_COLOR: Final[str] = "#3A4657"
 
 # Text
 TEXT_PRIMARY: Final[str] = "#F4F7FA"
@@ -37,7 +39,7 @@ ERROR: Final[str] = "#EF6A6A"
 INFO: Final[str] = "#5B8CFF"
 
 # Sidebar
-SIDEBAR_BACKGROUND: Final[str] = "#11161D"
+SIDEBAR_BACKGROUND: Final[str] = "#10161F"
 SIDEBAR_ITEM_HOVER: Final[str] = "#181E26"
 SIDEBAR_ITEM_ACTIVE: Final[str] = "#1A2540"
 
@@ -61,7 +63,7 @@ SPACE_2XL: Final[int] = 32
 SPACE_3XL: Final[int] = 48
 
 # Dimensions
-SIDEBAR_WIDTH: Final[int] = 280
+SIDEBAR_WIDTH: Final[int] = 240
 STATUS_BAR_HEIGHT: Final[int] = 42
 CONTENT_MAX_WIDTH: Final[int] = 1180
 CARD_MIN_HEIGHT: Final[int] = 230

@@ -4,6 +4,7 @@ import customtkinter as ctk
 
 from app.ui import theme
 from app.ui.components.page_container import PageContainer
+from app.ui.components.sidebar import Sidebar
 from app.ui.pages.home_page import HomePage
 
 
@@ -25,11 +26,13 @@ class MainWindow(ctk.CTk):
 
     def _configure_appearance(self) -> None:
         """Configura a aparência global da interface."""
+
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
 
     def _configure_window(self) -> None:
         """Configura as propriedades da janela principal."""
+
         self.title("ForgeDocs")
         self.geometry(f"{self.DEFAULT_WIDTH}x{self.DEFAULT_HEIGHT}")
         self.minsize(self.MIN_WIDTH, self.MIN_HEIGHT)
@@ -39,6 +42,7 @@ class MainWindow(ctk.CTk):
 
     def _configure_layout(self) -> None:
         """Configura o grid principal da janela."""
+
         self.grid_rowconfigure(0, weight=1)
         self.grid_rowconfigure(1, weight=0)
 
@@ -47,27 +51,27 @@ class MainWindow(ctk.CTk):
 
     def _build_application_shell(self) -> None:
         """Constrói a estrutura principal da interface."""
-        self._build_sidebar_placeholder()
+
+        self._build_sidebar()
         self._build_page_container()
         self._build_status_bar()
 
-    def _build_sidebar_placeholder(self) -> None:
-        """Constrói o espaço temporário destinado à sidebar."""
-        self.sidebar_frame = ctk.CTkFrame(
+    def _build_sidebar(self) -> None:
+        """Constrói a sidebar principal da aplicação."""
+
+        self.sidebar = Sidebar(
             master=self,
-            width=theme.SIDEBAR_WIDTH,
-            corner_radius=0,
-            fg_color=theme.SIDEBAR_BACKGROUND,
+            on_navigate=self._handle_navigation,
         )
-        self.sidebar_frame.grid(
+        self.sidebar.grid(
             row=0,
             column=0,
             sticky="nsew",
         )
-        self.sidebar_frame.grid_propagate(False)
 
     def _build_page_container(self) -> None:
         """Constrói a área responsável pela exibição das páginas."""
+
         self.page_container = PageContainer(self)
         self.page_container.grid(
             row=0,
@@ -80,6 +84,7 @@ class MainWindow(ctk.CTk):
 
     def _build_status_bar(self) -> None:
         """Constrói a barra de status inferior."""
+
         self.status_bar_frame = ctk.CTkFrame(
             master=self,
             height=theme.STATUS_BAR_HEIGHT,
@@ -96,15 +101,28 @@ class MainWindow(ctk.CTk):
         )
         self.status_bar_frame.grid_propagate(False)
 
+    def _handle_navigation(self, item_id: str) -> None:
+        """Processa temporariamente as solicitações de navegação."""
+
+        if item_id == "home":
+            self.page_container.show_page(self.home_page)
+
     def _center_window(self) -> None:
         """Centraliza a janela principal na tela."""
+
         self.update_idletasks()
 
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
 
-        position_x = max((screen_width - self.DEFAULT_WIDTH) // 2, 0)
-        position_y = max((screen_height - self.DEFAULT_HEIGHT) // 2, 0)
+        position_x = max(
+            (screen_width - self.DEFAULT_WIDTH) // 2,
+            0,
+        )
+        position_y = max(
+            (screen_height - self.DEFAULT_HEIGHT) // 2,
+            0,
+        )
 
         self.geometry(
             f"{self.DEFAULT_WIDTH}x{self.DEFAULT_HEIGHT}"
