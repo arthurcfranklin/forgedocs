@@ -1,168 +1,221 @@
-# ForgeDocs
+# 📄 ForgeDocs
 
-Suíte desktop moderna para Windows voltada ao processamento e gerenciamento de documentos, com foco em privacidade, produtividade e execução 100% local.
+![Status](https://img.shields.io/badge/Status-Alpha-orange)
+![Version](https://img.shields.io/badge/Version-v0.2.0--alpha-blue)
+![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-> **Status:** Em desenvolvimento (v0.1.0-alpha)
-
----
-
-## 📖 Sobre
-
-O **ForgeDocs** é um projeto desenvolvido em Python com o objetivo de oferecer uma suíte completa para manipulação de documentos, reunindo diversas ferramentas em uma única aplicação desktop.
-
-Todo o processamento é realizado localmente, sem dependência de serviços em nuvem ou APIs externas, garantindo maior privacidade, desempenho e controle sobre os arquivos do usuário.
-
-O projeto também faz parte do meu portfólio profissional, sendo desenvolvido com foco em arquitetura de software, boas práticas, escalabilidade e experiência do usuário.
+Suíte desktop moderna para Windows voltada ao processamento e gerenciamento de documentos, desenvolvida com foco em privacidade, produtividade e processamento 100% local.
 
 ---
 
-## ✨ Funcionalidades Planejadas
+# 📸 Interface
 
-### 📄 Conversão de documentos
+![ForgeDocs](assets/images/forgedocs-main.png)
+
+> Interface principal do ForgeDocs (v0.2.0-alpha), apresentando a arquitetura visual da aplicação, catálogo de ferramentas e os componentes que servirão de base para as próximas funcionalidades.
+
+---
+
+# 📊 Status
+
+🟢 Em desenvolvimento ativo.
+
+**Versão atual:** `v0.2.0-alpha`
+
+O ForgeDocs já possui sua infraestrutura principal concluída, incluindo arquitetura modular, Design System, interface desktop, sistema de ícones, documentação técnica e organização completa do projeto. As próximas versões serão dedicadas à implementação do motor de processamento de documentos.
+
+---
+
+# 📖 Sobre o Projeto
+
+O ForgeDocs é uma suíte desktop para Windows desenvolvida em Python com o objetivo de centralizar ferramentas para conversão, organização, otimização e proteção de documentos em uma única aplicação.
+
+O projeto segue a filosofia **Local First**, realizando todo o processamento diretamente na máquina do usuário. Dessa forma, elimina a dependência de serviços em nuvem, preserva a privacidade dos dados e oferece maior desempenho durante as operações.
+
+Além do desenvolvimento da aplicação, o projeto é estruturado com foco em arquitetura de software, documentação técnica, padronização visual, escalabilidade e boas práticas de engenharia de software.
+
+---
+
+# 🎯 Objetivos
+
+- Centralizar ferramentas de processamento de documentos
+- Eliminar a dependência de serviços online
+- Garantir processamento totalmente local
+- Construir uma arquitetura modular e escalável
+- Desenvolver uma interface moderna e consistente
+- Aplicar boas práticas de engenharia de software
+
+---
+
+# ✨ Funcionalidades
+
+## 📄 Conversão de documentos
 
 - Word → PDF
+- PDF → Word
 - Excel → PDF
+- PDF → Excel
 - PowerPoint → PDF
+- PDF → PowerPoint
 - Imagens → PDF
+- PDF → Imagens
 - Markdown → PDF
+- HTML → PDF
 
-### 📑 Organização de PDFs
+## 📑 Organização de PDFs
 
 - Mesclar PDFs
 - Dividir PDFs
 - Reordenar páginas
 - Rotacionar páginas
+- Extrair páginas
 - Remover páginas
 
-### ⚡ Otimização
+## ✏️ Edição
+
+- Marca d'água
+- Numeração de páginas
+- Cabeçalhos e rodapés
+- Metadados
+- Edição básica de PDFs
+
+## ⚡ Otimização
 
 - Compressão de PDFs
-- Otimização de imagens
-- Redução de tamanho de arquivos
+- OCR
+- Conversão para PDF/A
+- Reparo de arquivos
 
-### 🔍 OCR
-
-- Reconhecimento óptico de caracteres
-- Pesquisa em documentos digitalizados
-
-### 🔒 Segurança
+## 🔒 Segurança
 
 - Proteção por senha
-- Remoção de senha (quando autorizada)
-- Marca d'água
+- Remoção de senha
+- Redação de conteúdo
+- Comparação de documentos
 - Assinatura digital
 
 ---
 
-## 🏗️ Arquitetura
+# 🏗 Arquitetura
 
-O projeto segue uma arquitetura modular para facilitar manutenção, escalabilidade e evolução das funcionalidades.
-
-```
+```text
 ForgeDocs
 │
 ├── app
 │   ├── core
 │   ├── services
-│   │   ├── conversion
-│   │   ├── optimization
-│   │   ├── organization
-│   │   └── security
 │   └── ui
 │       ├── components
-│       └── pages
+│       └── views
 │
 ├── assets
-│
 ├── docs
-│
 ├── tests
 │
 ├── main.py
-├── requirements.txt
-└── README.md
+└── requirements.txt
 ```
+
+A arquitetura foi projetada para favorecer modularidade, reutilização de componentes, manutenção simplificada e expansão contínua da aplicação.
 
 ---
 
-## 🚀 Tecnologias
+# 🛠 Tecnologias Utilizadas
 
-### Linguagem
+## Linguagem
 
 - Python 3.13
 
-### Interface
+## Interface
 
 - CustomTkinter
+- Pillow
 
-### Manipulação de documentos
+## Processamento de documentos
 
 - PyMuPDF
+- pypdf
 - python-docx
 - openpyxl
 - python-pptx
 
-### Imagens
+## Versionamento
 
-- Pillow
-
-### Empacotamento
-
-- PyInstaller
+- Git
+- GitHub
 
 ---
 
-## 🗺️ Roadmap
+# 📚 Documentação
 
-### Sprint 0 — Fundação ✅
+Toda a documentação técnica encontra-se disponível em:
 
-- [x] Estrutura do projeto
-- [x] Git
-- [x] GitHub
-- [x] Ambiente virtual
-- [x] README inicial
-- [x] Licença MIT
+```text
+docs/
+```
 
-### Sprint 1 — Interface
+## Documentos disponíveis
 
-- [ ] Janela principal
-- [ ] Sidebar
-- [ ] Navegação
-- [ ] Tema Dark
-- [ ] Componentes reutilizáveis
-
-### Sprint 2 — Conversão
-
-- [ ] Word → PDF
-- [ ] Excel → PDF
-- [ ] PowerPoint → PDF
-
-### Sprint 3 — PDFs
-
-- [ ] Mesclar
-- [ ] Dividir
-- [ ] Organizar páginas
-
-### Sprint 4 — Recursos avançados
-
-- [ ] OCR
-- [ ] Compressão
-- [ ] Segurança
+- Architecture Documentation
+- Coding Standards
+- UI Guidelines
+- Product Roadmap
 
 ---
 
-## 🎯 Objetivos
+# 🚀 Releases
+
+| Versão | Descrição |
+|---------|-----------|
+| v0.1.0-alpha | Project Foundation |
+| v0.2.0-alpha | Application Shell & Design System |
+
+---
+
+# 🗺 Roadmap
+
+## ✅ Concluído
 
 - Arquitetura modular
-- Código limpo e documentado
-- Interface moderna
-- Processamento local
-- Alto desempenho
-- Fácil manutenção
+- Interface desktop
+- Design System
+- Sistema de ícones
+- Estrutura de configuração
+- Sistema de logging
+- Documentação técnica
+- Estrutura de releases
+
+## 🚧 Próxima versão — v0.3.0-alpha
+
+### Document Conversion Engine
+
+- Word → PDF
+- PDF → Word
+- Excel → PDF
+- PowerPoint → PDF
+- Imagens → PDF
+
+## 🔮 Futuras versões
+
+### Organização de PDFs
+
+- Mesclagem
+- Divisão
+- Reordenação
+- Extração de páginas
+
+### Ferramentas avançadas
+
+- OCR
+- Compressão
+- Segurança
+- Plugins
 
 ---
 
-## 📄 Licença
+# 📄 Licença
 
 Distribuído sob a licença **MIT**.
 
