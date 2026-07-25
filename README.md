@@ -10,7 +10,17 @@ Suíte desktop moderna para Windows voltada ao processamento e gerenciamento de 
 
 ---
 
-# 📸 Interface
+## ✨ Principais Características
+
+- 🔒 **Privacidade por padrão** — processamento realizado totalmente offline.
+- ⚡ **Arquitetura escalável** — componentes independentes e reutilizáveis.
+- 🎨 **Design consistente** — interface moderna baseada em Design System dedicado.
+- 📄 **Suíte integrada** — preparada para centralizar ferramentas de documentos.
+- 📚 **Desenvolvimento estruturado** — documentação técnica e roadmap versionados.
+
+---
+
+# 📸 Preview da Interface
 
 ![ForgeDocs](assets/images/forgedocs-main.png)
 
@@ -24,7 +34,7 @@ Suíte desktop moderna para Windows voltada ao processamento e gerenciamento de 
 
 **Versão atual:** `v0.2.0-alpha`
 
-O ForgeDocs já possui sua infraestrutura principal concluída, incluindo arquitetura modular, Design System, interface desktop, sistema de ícones, documentação técnica e organização completa do projeto. As próximas versões serão dedicadas à implementação do motor de processamento de documentos.
+O ForgeDocs já possui sua infraestrutura principal concluída, incluindo arquitetura modular, Design System, interface desktop, sistema de ícones, documentação técnica e organização completa do projeto. As próximas versões serão focadas na implementação das funcionalidades de processamento e gerenciamento de documentos.
 
 ---
 
@@ -150,17 +160,27 @@ A arquitetura foi projetada para favorecer modularidade, reutilização de compo
 
 # 📚 Documentação
 
-Toda a documentação técnica encontra-se disponível em:
+Toda a documentação técnica do projeto encontra-se disponível em:
 
 ```text
 docs/
 ```
 
-## Documentos disponíveis
+## Documentos Disponíveis
+
+### Arquitetura
 
 - Architecture Documentation
-- Coding Standards
+- Design System
 - UI Guidelines
+
+### Engenharia
+
+- Coding Standards
+- Engineering Guidelines
+
+### Planejamento
+
 - Product Roadmap
 
 ---
@@ -196,6 +216,7 @@ docs/
 - Excel → PDF
 - PowerPoint → PDF
 - Imagens → PDF
+- PDF → Imagens
 
 ## 🔮 Futuras versões
 
