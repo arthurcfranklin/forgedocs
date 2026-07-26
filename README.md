@@ -22,7 +22,7 @@ Suíte desktop moderna para Windows voltada ao processamento e gerenciamento de 
 
 # 📸 Preview da Interface
 
-![ForgeDocs](assets/images/forgedocs-main.png)
+![ForgeDocs](assets/images/app/forgedocs-main.png)
 
 > Interface principal do ForgeDocs (v0.2.0-alpha), apresentando a arquitetura visual da aplicação, catálogo de ferramentas e os componentes que servirão de base para as próximas funcionalidades.
 
