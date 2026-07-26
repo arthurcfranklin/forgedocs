@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1600" height="300" viewBox="0 0 1600 300"
+     role="img" aria-label="Encerramento do README do ForgeDocs">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090C11"/>
+      <stop offset="58%" stop-color="#0D1118"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="85%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.16"/>
+      <stop offset="72%" stop-color="#2563EB" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none"
+            stroke="#94A3B8" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="300" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="300" rx="28" fill="url(#grid)"/>
+  <rect width="1600" height="300" rx="28" fill="url(#glow)"/>
+
+  <g transform="translate(88 52)">
+    <rect width="58" height="6" rx="3" fill="url(#accent)"/>
+
+    <text x="0" y="48"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" letter-spacing="3.2"
+          fill="#7DD3FC">FORGEDOCS</text>
+
+    <text x="0" y="108"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="44" font-weight="700" letter-spacing="-1.4"
+          fill="#F8FAFC">Thanks for following along!</text>
+
+    <text x="0" y="158"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="20" font-weight="400"
+          fill="#94A3B8">Follow the development and future updates of ForgeDocs on GitHub.</text>
+  </g>
+
+  <g transform="translate(88 244)">
+    <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+    <circle cx="7" cy="7" r="2.5" fill="#BFDBFE"/>
+
+    <text x="27" y="13"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="600"
+          fill="#64748B">Open Source • Local-First • Windows • Python • MIT License</text>
+  </g>
+
+  <rect x="1" y="1" width="1598" height="298" rx="27"
+        fill="none" stroke="#334155"
+        stroke-opacity="0.70" stroke-width="2"/>
+</svg>
