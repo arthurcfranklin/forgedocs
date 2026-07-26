@@ -1,11 +1,13 @@
 # Ambiente virtual
 .venv/
 venv/
+env/
 
 # Python
 __pycache__/
 *.py[cod]
 *.pyd
+*.so
 
 # VS Code
 .vscode/
@@ -13,17 +15,29 @@ __pycache__/
 # Testes
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
+.tox/
+.nox/
+
+# Ferramentas
+.mypy_cache/
+.ruff_cache/
 
 # Build
 build/
 dist/
 *.spec
+*.egg-info/
 
 # Logs e temporários
 *.log
+logs/
 temp/
 tmp/
+
+# Saídas da aplicação
+output/
 
 # Sistema
 Thumbs.db
