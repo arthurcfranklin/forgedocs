@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1600" height="1040" viewBox="0 0 1600 1040"
+     role="img" aria-label="ForgeDocs project structure">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090C11"/>
+      <stop offset="58%" stop-color="#0D1118"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="10%" r="70%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#2563EB" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cardGlow" cx="0%" cy="0%" r="95%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none"
+            stroke="#94A3B8" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1040" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="1040" rx="28" fill="url(#grid)"/>
+  <rect width="1600" height="1040" rx="28" fill="url(#glow)"/>
+
+  <g transform="translate(88 62)">
+    <rect width="58" height="6" rx="3" fill="url(#accent)"/>
+    <text x="0" y="48"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700"
+          letter-spacing="3.2" fill="#7DD3FC">PROJECT STRUCTURE</text>
+    <text x="0" y="116"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="700"
+          letter-spacing="-1.5" fill="#F8FAFC">Clear organization for development and maintenance.</text>
+    <text x="0" y="166"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="400"
+          fill="#94A3B8">Each directory has a defined responsibility within the ForgeDocs architecture.</text>
+  </g>
+
+  <g>
+    <rect x="610" y="286" width="380" height="90" rx="22"
+          fill="#172554" stroke="#2563EB" stroke-width="2"/>
+    <text x="800" y="341" text-anchor="middle"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="800"
+          fill="#F8FAFC">ForgeDocs</text>
+  </g>
+
+  <!-- Main directory connectors -->
+  <path d="M800 376V404"
+        fill="none" stroke="#60A5FA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M253 404H1393"
+        fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+  <path d="M253 404V438M633 404V438M1013 404V438M1393 404V438"
+        fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+
+  
+  <g>
+    <rect x="88" y="438" width="330" height="226" rx="22"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="89" y="439" width="328" height="224" rx="21"
+          fill="url(#cardGlow)" opacity="0.78"/>
+
+    <rect x="112" y="462" width="58" height="58" rx="15"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    
+    <g transform="translate(125 475) scale(1.3333333333333333)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+    </g>
+
+    <text x="192" y="498"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700"
+          fill="#F8FAFC">app/</text>
+
+    <text x="114" y="562"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="500"
+          fill="#94A3B8"><tspan x="114" dy="0">Core — configuration and infrastructure</tspan><tspan x="114" dy="24">Services — rules and processing</tspan><tspan x="114" dy="24">UI — interface and components</tspan></text>
+  </g>
+  <g>
+    <rect x="468" y="438" width="330" height="226" rx="22"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="469" y="439" width="328" height="224" rx="21"
+          fill="url(#cardGlow)" opacity="0.78"/>
+
+    <rect x="492" y="462" width="58" height="58" rx="15"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    
+    <g transform="translate(505 475) scale(1.3333333333333333)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+    </g>
+
+    <text x="572" y="498"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700"
+          fill="#F8FAFC">assets/</text>
+
+    <text x="494" y="562"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="500"
+          fill="#94A3B8"><tspan x="494" dy="0">Documentation visuals</tspan><tspan x="494" dy="24">Fonts and icons</tspan><tspan x="494" dy="24">Application screenshots</tspan></text>
+  </g>
+  <g>
+    <rect x="848" y="438" width="330" height="226" rx="22"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="849" y="439" width="328" height="224" rx="21"
+          fill="url(#cardGlow)" opacity="0.78"/>
+
+    <rect x="872" y="462" width="58" height="58" rx="15"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    
+    <g transform="translate(885 475) scale(1.3333333333333333)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+    </g>
+
+    <text x="952" y="498"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700"
+          fill="#F8FAFC">docs/</text>
+
+    <text x="874" y="562"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="500"
+          fill="#94A3B8"><tspan x="874" dy="0">Architecture</tspan><tspan x="874" dy="24">Coding standards</tspan><tspan x="874" dy="24">Roadmap and guidelines</tspan></text>
+  </g>
+  <g>
+    <rect x="1228" y="438" width="330" height="226" rx="22"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="1229" y="439" width="328" height="224" rx="21"
+          fill="url(#cardGlow)" opacity="0.78"/>
+
+    <rect x="1252" y="462" width="58" height="58" rx="15"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    
+    <g transform="translate(1265 475) scale(1.3333333333333333)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+    </g>
+
+    <text x="1332" y="498"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700"
+          fill="#F8FAFC">tests/</text>
+
+    <text x="1254" y="562"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="500"
+          fill="#94A3B8"><tspan x="1254" dy="0">Automated tests</tspan><tspan x="1254" dy="24">Service validation</tspan><tspan x="1254" dy="24">Regression and reliability</tspan></text>
+  </g>
+
+  <!-- Root files section with a protected label area -->
+  <path d="M800 664V720"
+        fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+
+  <g>
+    <rect x="688" y="720" width="224" height="44" rx="13"
+          fill="#0D1118" stroke="#243244" stroke-width="2"/>
+    <text x="800" y="748" text-anchor="middle"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700"
+          letter-spacing="2.2" fill="#7DD3FC">ROOT FILES</text>
+  </g>
+
+  <path d="M800 764V798"
+        fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+  <path d="M345 798H1215"
+        fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+  <path d="M345 798V840M635 798V840M925 798V840M1215 798V840"
+        fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+
+  
+  <g>
+    <rect x="220" y="840" width="250" height="66" rx="16"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    
+    <g transform="translate(242 857) scale(1.25)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+    </g>
+    <text x="296" y="881"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700"
+          fill="#E2E8F0">config/</text>
+  </g>
+  <g>
+    <rect x="510" y="840" width="250" height="66" rx="16"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    
+    <g transform="translate(532 857) scale(1.25)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/>
+    </g>
+    <text x="586" y="881"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700"
+          fill="#E2E8F0">main.py</text>
+  </g>
+  <g>
+    <rect x="800" y="840" width="250" height="66" rx="16"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    
+    <g transform="translate(822 857) scale(1.25)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/>
+    </g>
+    <text x="876" y="881"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700"
+          fill="#E2E8F0">requirements.txt</text>
+  </g>
+  <g>
+    <rect x="1090" y="840" width="250" height="66" rx="16"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    
+    <g transform="translate(1112 857) scale(1.25)"
+       fill="none" stroke="#93C5FD" stroke-width="1.7"
+       stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/>
+    </g>
+    <text x="1166" y="881"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700"
+          fill="#E2E8F0">README.md</text>
+  </g>
+
+  <g transform="translate(88 978)">
+    <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+    <circle cx="7" cy="7" r="2.5" fill="#BFDBFE"/>
+    <text x="27" y="13"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="600"
+          fill="#64748B">Predictable structure • Separation of concerns • Scalability</text>
+  </g>
+
+  <rect x="1" y="1" width="1598" height="1038" rx="27"
+        fill="none" stroke="#334155" stroke-opacity="0.70" stroke-width="2"/>
+</svg>

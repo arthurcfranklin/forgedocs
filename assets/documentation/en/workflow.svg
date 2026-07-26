@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="590" viewBox="0 0 1600 590"
+     role="img" aria-label="ForgeDocs usage workflow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090C11"/>
+      <stop offset="58%" stop-color="#0D1118"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="12%" r="72%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#2563EB" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="cardGlow" cx="0%" cy="0%" r="95%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#94A3B8" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="590" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="590" rx="28" fill="url(#grid)"/>
+  <rect width="1600" height="590" rx="28" fill="url(#glow)"/>
+
+  <g transform="translate(90 68)">
+    <rect width="58" height="6" rx="3" fill="url(#accent)"/>
+    <text x="0" y="48"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" letter-spacing="3.2"
+          fill="#7DD3FC">USAGE WORKFLOW</text>
+    <text x="0" y="113"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="48" font-weight="700" letter-spacing="-1.5"
+          fill="#F8FAFC">From source file to final output.</text>
+    <text x="0" y="157"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="21" font-weight="400"
+          fill="#94A3B8">A simple, predictable, fully local process.</text>
+  </g>
+
+
+        <g transform="translate(90 282)">
+          <rect width="228" height="190" rx="22" fill="#111827" stroke="#243244" stroke-width="2"/>
+          <rect x="1" y="1" width="226" height="188" rx="21" fill="url(#cardGlow)" opacity="0.8"/>
+
+          <rect x="22" y="22" width="48" height="48" rx="14" fill="#172554" stroke="#2563EB" stroke-opacity="0.7"/>
+          <text x="46" y="54" text-anchor="middle"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="18" font-weight="700" fill="#BFDBFE">01</text>
+
+          <text x="22" y="105"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="25" font-weight="700" fill="#F8FAFC">Select</text>
+
+          <text x="22" y="139"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="15" font-weight="400" fill="#94A3B8">
+            <tspan x="22" dy="0">Choose one</tspan>
+            <tspan x="22" dy="22">or more files.</tspan>
+          </text>
+
+            <path d="M246 94 H286" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+            <path d="M276 84 L286 94 L276 104" fill="none" stroke="#60A5FA" stroke-width="4"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(388 282)">
+          <rect width="228" height="190" rx="22" fill="#111827" stroke="#243244" stroke-width="2"/>
+          <rect x="1" y="1" width="226" height="188" rx="21" fill="url(#cardGlow)" opacity="0.8"/>
+
+          <rect x="22" y="22" width="48" height="48" rx="14" fill="#172554" stroke="#2563EB" stroke-opacity="0.7"/>
+          <text x="46" y="54" text-anchor="middle"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="18" font-weight="700" fill="#BFDBFE">02</text>
+
+          <text x="22" y="105"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="25" font-weight="700" fill="#F8FAFC">Configure</text>
+
+          <text x="22" y="139"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="15" font-weight="400" fill="#94A3B8">
+            <tspan x="22" dy="0">Set the operation</tspan>
+            <tspan x="22" dy="22">and parameters.</tspan>
+          </text>
+
+            <path d="M246 94 H286" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+            <path d="M276 84 L286 94 L276 104" fill="none" stroke="#60A5FA" stroke-width="4"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(686 282)">
+          <rect width="228" height="190" rx="22" fill="#111827" stroke="#243244" stroke-width="2"/>
+          <rect x="1" y="1" width="226" height="188" rx="21" fill="url(#cardGlow)" opacity="0.8"/>
+
+          <rect x="22" y="22" width="48" height="48" rx="14" fill="#172554" stroke="#2563EB" stroke-opacity="0.7"/>
+          <text x="46" y="54" text-anchor="middle"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="18" font-weight="700" fill="#BFDBFE">03</text>
+
+          <text x="22" y="105"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="25" font-weight="700" fill="#F8FAFC">Process</text>
+
+          <text x="22" y="139"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="15" font-weight="400" fill="#94A3B8">
+            <tspan x="22" dy="0">Run everything locally</tspan>
+            <tspan x="22" dy="22">on the device.</tspan>
+          </text>
+
+            <path d="M246 94 H286" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+            <path d="M276 84 L286 94 L276 104" fill="none" stroke="#60A5FA" stroke-width="4"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(984 282)">
+          <rect width="228" height="190" rx="22" fill="#111827" stroke="#243244" stroke-width="2"/>
+          <rect x="1" y="1" width="226" height="188" rx="21" fill="url(#cardGlow)" opacity="0.8"/>
+
+          <rect x="22" y="22" width="48" height="48" rx="14" fill="#172554" stroke="#2563EB" stroke-opacity="0.7"/>
+          <text x="46" y="54" text-anchor="middle"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="18" font-weight="700" fill="#BFDBFE">04</text>
+
+          <text x="22" y="105"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="25" font-weight="700" fill="#F8FAFC">Review</text>
+
+          <text x="22" y="139"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="15" font-weight="400" fill="#94A3B8">
+            <tspan x="22" dy="0">Check the result</tspan>
+            <tspan x="22" dy="22">before saving.</tspan>
+          </text>
+
+            <path d="M246 94 H286" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+            <path d="M276 84 L286 94 L276 104" fill="none" stroke="#60A5FA" stroke-width="4"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(1282 282)">
+          <rect width="228" height="190" rx="22" fill="#111827" stroke="#243244" stroke-width="2"/>
+          <rect x="1" y="1" width="226" height="188" rx="21" fill="url(#cardGlow)" opacity="0.8"/>
+
+          <rect x="22" y="22" width="48" height="48" rx="14" fill="#172554" stroke="#2563EB" stroke-opacity="0.7"/>
+          <text x="46" y="54" text-anchor="middle"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="18" font-weight="700" fill="#BFDBFE">05</text>
+
+          <text x="22" y="105"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="25" font-weight="700" fill="#F8FAFC">Export</text>
+
+          <text x="22" y="139"
+                font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+                font-size="15" font-weight="400" fill="#94A3B8">
+            <tspan x="22" dy="0">Generate the final file</tspan>
+            <tspan x="22" dy="22">in the chosen location.</tspan>
+          </text>
+
+        </g>
+
+  <g transform="translate(90 526)">
+    <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+    <circle cx="7" cy="7" r="2.5" fill="#BFDBFE"/>
+    <text x="27" y="13"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="600"
+          fill="#64748B">No uploads to external services • No cloud dependency</text>
+  </g>
+
+  <rect x="1" y="1" width="1598" height="588" rx="27"
+        fill="none" stroke="#334155" stroke-opacity="0.70" stroke-width="2"/>
+</svg>

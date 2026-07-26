@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1600" height="1010" viewBox="0 0 1600 1010"
+     role="img" aria-label="Arquitetura modular do ForgeDocs">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090C11"/>
+      <stop offset="58%" stop-color="#0D1118"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="10%" r="70%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#2563EB" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cardGlow" cx="0%" cy="0%" r="95%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#94A3B8" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1010" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="1010" rx="28" fill="url(#grid)"/>
+  <rect width="1600" height="1010" rx="28" fill="url(#glow)"/>
+
+  <g transform="translate(88 62)">
+    <rect width="58" height="6" rx="3" fill="url(#accent)"/>
+    <text x="0" y="48"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" letter-spacing="3.2"
+          fill="#7DD3FC">ARQUITETURA</text>
+    <text x="0" y="116"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="48" font-weight="700" letter-spacing="-1.5"
+          fill="#F8FAFC">Uma estrutura modular para crescer com segurança.</text>
+    <text x="0" y="164"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="21" font-weight="400" fill="#94A3B8">Camadas bem definidas separam interface, orquestração, regras e processamento de documentos.</text>
+  </g>
+
+  
+  <g>
+    <rect x="88" y="260" width="430" height="170" rx="20"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="89" y="261" width="428" height="168" rx="19"
+          fill="url(#cardGlow)" opacity="0.78"/>
+    <rect x="108" y="280" width="48" height="48" rx="14"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    <path d="M122 296H142M122 304H146M122 312H138"
+          stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/>
+    <text x="172" y="313"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="23" font-weight="700" fill="#F8FAFC">Interface</text>
+    <text x="112" y="356"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="500" fill="#94A3B8">
+      <tspan x="112" dy="0">CustomTkinter</tspan><tspan x="112" dy="23">Experiência desktop</tspan><tspan x="112" dy="23">Navegação e feedback</tspan>
+    </text>
+  </g>
+  <g>
+    <rect x="585" y="260" width="430" height="170" rx="20"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="586" y="261" width="428" height="168" rx="19"
+          fill="url(#cardGlow)" opacity="0.78"/>
+    <rect x="605" y="280" width="48" height="48" rx="14"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    <path d="M619 296H639M619 304H643M619 312H635"
+          stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/>
+    <text x="669" y="313"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="23" font-weight="700" fill="#F8FAFC">Aplicação</text>
+    <text x="609" y="356"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="500" fill="#94A3B8">
+      <tspan x="609" dy="0">Orquestração dos fluxos</tspan><tspan x="609" dy="23">Coordenação de serviços</tspan><tspan x="609" dy="23">Estado da interface</tspan>
+    </text>
+  </g>
+  <g>
+    <rect x="1082" y="260" width="430" height="170" rx="20"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="1083" y="261" width="428" height="168" rx="19"
+          fill="url(#cardGlow)" opacity="0.78"/>
+    <rect x="1102" y="280" width="48" height="48" rx="14"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    <path d="M1116 296H1136M1116 304H1140M1116 312H1132"
+          stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/>
+    <text x="1166" y="313"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="23" font-weight="700" fill="#F8FAFC">Núcleo</text>
+    <text x="1106" y="356"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="500" fill="#94A3B8">
+      <tspan x="1106" dy="0">Configurações e caminhos</tspan><tspan x="1106" dy="23">Logs e exceções</tspan><tspan x="1106" dy="23">Constantes compartilhadas</tspan>
+    </text>
+  </g>
+
+  <path d="M303 430V465H530V500" fill="none" stroke="#334155" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M800 430V465H530V500" fill="none" stroke="#334155" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M800 430V465H1070V500" fill="none" stroke="#334155" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1297 430V465H1070V500" fill="none" stroke="#334155" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="530" cy="465" r="7" fill="#2563EB"/>
+  <circle cx="1070" cy="465" r="7" fill="#2563EB"/>
+
+  
+  <g>
+    <rect x="315" y="500" width="430" height="170" rx="20"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="316" y="501" width="428" height="168" rx="19"
+          fill="url(#cardGlow)" opacity="0.78"/>
+    <rect x="335" y="520" width="48" height="48" rx="14"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    <path d="M349 536H369M349 544H373M349 552H365"
+          stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/>
+    <text x="399" y="553"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="23" font-weight="700" fill="#F8FAFC">Serviços</text>
+    <text x="339" y="596"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="500" fill="#94A3B8">
+      <tspan x="339" dy="0">Conversão</tspan><tspan x="339" dy="23">Organização</tspan><tspan x="339" dy="23">Otimização</tspan>
+    </text>
+  </g>
+  <g>
+    <rect x="855" y="500" width="430" height="170" rx="20"
+          fill="#111827" stroke="#243244" stroke-width="2"/>
+    <rect x="856" y="501" width="428" height="168" rx="19"
+          fill="url(#cardGlow)" opacity="0.78"/>
+    <rect x="875" y="520" width="48" height="48" rx="14"
+          fill="#172554" stroke="#2563EB" stroke-opacity="0.72"/>
+    <path d="M889 536H909M889 544H913M889 552H905"
+          stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/>
+    <text x="939" y="553"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="23" font-weight="700" fill="#F8FAFC">Utilitários</text>
+    <text x="879" y="596"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="500" fill="#94A3B8">
+      <tspan x="879" dy="0">Validação de arquivos</tspan><tspan x="879" dy="23">Operações auxiliares</tspan><tspan x="879" dy="23">Integrações locais</tspan>
+    </text>
+  </g>
+
+  <path d="M530 670V730H800" fill="none" stroke="#334155" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1070 670V730H800" fill="none" stroke="#334155" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="730" r="7" fill="#2563EB"/>
+
+  <text x="800" y="775" text-anchor="middle"
+        font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+        font-size="18" font-weight="700" letter-spacing="1.5"
+        fill="#7DD3FC">MOTORES DE DOCUMENTOS</text>
+
+  <path d="M800 790V812" fill="none" stroke="#60A5FA" stroke-width="4"
+        stroke-linecap="round"/>
+  <path d="M790 802L800 812L810 802" fill="none" stroke="#60A5FA" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  
+  <g>
+    <rect x="280" y="830" width="160" height="52" rx="14"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <circle cx="304" cy="856" r="7" fill="#2563EB"/>
+    <circle cx="304" cy="856" r="3" fill="#BFDBFE"/>
+    <text x="326" y="862"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" fill="#E2E8F0">PDF</text>
+  </g>
+  <g>
+    <rect x="456" y="830" width="160" height="52" rx="14"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <circle cx="480" cy="856" r="7" fill="#2563EB"/>
+    <circle cx="480" cy="856" r="3" fill="#BFDBFE"/>
+    <text x="502" y="862"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" fill="#E2E8F0">Word</text>
+  </g>
+  <g>
+    <rect x="632" y="830" width="160" height="52" rx="14"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <circle cx="656" cy="856" r="7" fill="#2563EB"/>
+    <circle cx="656" cy="856" r="3" fill="#BFDBFE"/>
+    <text x="678" y="862"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" fill="#E2E8F0">Excel</text>
+  </g>
+  <g>
+    <rect x="808" y="830" width="160" height="52" rx="14"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <circle cx="832" cy="856" r="7" fill="#2563EB"/>
+    <circle cx="832" cy="856" r="3" fill="#BFDBFE"/>
+    <text x="854" y="862"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" fill="#E2E8F0">PowerPoint</text>
+  </g>
+  <g>
+    <rect x="984" y="830" width="160" height="52" rx="14"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <circle cx="1008" cy="856" r="7" fill="#2563EB"/>
+    <circle cx="1008" cy="856" r="3" fill="#BFDBFE"/>
+    <text x="1030" y="862"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" fill="#E2E8F0">Imagens</text>
+  </g>
+  <g>
+    <rect x="1160" y="830" width="160" height="52" rx="14"
+          fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <circle cx="1184" cy="856" r="7" fill="#2563EB"/>
+    <circle cx="1184" cy="856" r="3" fill="#BFDBFE"/>
+    <text x="1206" y="862"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="17" font-weight="700" fill="#E2E8F0">Markdown</text>
+  </g>
+
+  <g transform="translate(88 946)">
+    <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+    <circle cx="7" cy="7" r="2.5" fill="#BFDBFE"/>
+    <text x="27" y="13"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="15" font-weight="600" fill="#64748B">Baixo acoplamento • Responsabilidades claras • Evolução incremental</text>
+  </g>
+
+  <rect x="1" y="1" width="1598" height="1008" rx="27"
+        fill="none" stroke="#334155" stroke-opacity="0.70" stroke-width="2"/>
+</svg>
