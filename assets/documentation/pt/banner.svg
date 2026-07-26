@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" role="img" aria-label="Banner do ForgeDocs em português">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0D12"/>
+      <stop offset="58%" stop-color="#0D1118"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="72%" cy="44%" r="52%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.28"/>
+      <stop offset="52%" stop-color="#2563EB" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <linearGradient id="document" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#172033"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94A3B8" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="480" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="480" rx="28" fill="url(#grid)"/>
+  <rect width="1600" height="480" rx="28" fill="url(#glow)"/>
+
+  <path d="M0 360 C260 300 430 430 690 378 C940 328 1080 244 1600 314 L1600 480 L0 480 Z"
+        fill="#2563EB" fill-opacity="0.035"/>
+
+  <g transform="translate(104 82)">
+    <rect x="0" y="0" width="58" height="6" rx="3" fill="url(#accent)"/>
+
+    <text x="0" y="50"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="18" font-weight="700" letter-spacing="3.2"
+          fill="#7DD3FC">SUÍTE DESKTOP PARA WINDOWS</text>
+
+    <text x="0" y="142"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="86" font-weight="700" letter-spacing="-3"
+          fill="#F8FAFC">Forge<tspan fill="#60A5FA">Docs</tspan></text>
+
+    <text x="2" y="196"
+          font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+          font-size="26" font-weight="400"
+          fill="#CBD5E1">Ferramentas profissionais para documentos. Totalmente local.</text>
+
+    <g transform="translate(0 246)">
+      <g>
+        <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+        <circle cx="7" cy="7" r="2.5" fill="#BFDBFE"/>
+        <text x="26" y="13"
+              font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+              font-size="14" font-weight="700" letter-spacing="1.8"
+              fill="#94A3B8">100% LOCAL</text>
+      </g>
+
+      <g transform="translate(176 0)">
+        <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+        <circle cx="7" cy="7" r="2.5" fill="#BFDBFE"/>
+        <text x="26" y="13"
+              font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+              font-size="14" font-weight="700" letter-spacing="1.8"
+              fill="#94A3B8">PRIVACIDADE</text>
+      </g>
+
+      <g transform="translate(384 0)">
+        <circle cx="7" cy="7" r="7" fill="#2563EB"/>
+        <circle cx="7" cy="7" r="2.5" fill="#BFDBFE"/>
+        <text x="26" y="13"
+              font-family="Host Grotesk, Inter, Segoe UI, Arial, sans-serif"
+              font-size="14" font-weight="700" letter-spacing="1.8"
+              fill="#94A3B8">PRODUTIVIDADE</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(1080 52)" filter="url(#shadow)">
+    <circle cx="208" cy="188" r="164" fill="#2563EB" fill-opacity="0.09"/>
+    <circle cx="208" cy="188" r="118" fill="#2563EB" fill-opacity="0.07"/>
+
+    <g transform="rotate(-7 210 190)">
+      <path d="M95 38 H258 L332 112 V332 C332 351 317 366 298 366 H95 C76 366 61 351 61 332 V72 C61 53 76 38 95 38 Z"
+            fill="url(#document)" stroke="#334155" stroke-width="2"/>
+      <path d="M258 38 V92 C258 103 267 112 278 112 H332"
+            fill="none" stroke="#60A5FA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="103" y="139" width="158" height="10" rx="5" fill="#E2E8F0" fill-opacity="0.90"/>
+      <rect x="103" y="171" width="184" height="8" rx="4" fill="#94A3B8" fill-opacity="0.56"/>
+      <rect x="103" y="199" width="166" height="8" rx="4" fill="#94A3B8" fill-opacity="0.42"/>
+      <rect x="103" y="227" width="122" height="8" rx="4" fill="#94A3B8" fill-opacity="0.34"/>
+
+      <rect x="103" y="276" width="98" height="36" rx="10" fill="#2563EB"/>
+      <path d="M131 294 H173" stroke="#DBEAFE" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(8 252)">
+      <rect width="108" height="108" rx="26" fill="#111827" stroke="#334155" stroke-width="2"/>
+      <path d="M32 34 H70 L82 46 V77 C82 83 77 88 71 88 H32 C26 88 21 83 21 77 V45 C21 39 26 34 32 34 Z"
+            fill="none" stroke="url(#accent)" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M69 34 V46 H82" fill="none" stroke="#93C5FD" stroke-width="5" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="1598" height="478" rx="27" fill="none" stroke="#334155" stroke-opacity="0.72" stroke-width="2"/>
+</svg>
