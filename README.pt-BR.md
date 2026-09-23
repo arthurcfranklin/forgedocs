@@ -2,8 +2,6 @@
 
 Suíte local para processamento de documentos no Windows, desenvolvida em Python.
 
-[English](README.md)
-
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=flat&logo=python&logoColor=white)
 ![Plataforma](https://img.shields.io/badge/Plataforma-Windows-0078D4?style=flat)
 ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-2EA44F?style=flat)
@@ -137,12 +135,12 @@ As áreas documentadas atualmente incluem:
 
 ## Roadmap
 
-- [x] Foundation
-- [x] Core Services
-- [ ] Desktop GUI
-- [ ] Document Tools
-- [ ] Optimization
-- [ ] Security & v1.0
+- [x] Fundação
+- [x] Serviços Principais
+- [ ] Interface Desktop
+- [ ] Ferramentas de Documentos
+- [ ] Otimização
+- [ ] Segurança e v1.0
 
 O desenvolvimento segue uma abordagem incremental, priorizando a consolidação de uma base estável antes da expansão do conjunto de funcionalidades.
 
@@ -155,10 +153,6 @@ O desenvolvimento segue uma abordagem incremental, priorizando a consolidação 
 - **Desenvolvimento incremental** — Novas funcionalidades são incorporadas conforme a plataforma amadurece.
 - **Código aberto** — O desenvolvimento permanece transparente e documentado.
 
-## Licença
-
-O ForgeDocs é distribuído sob a [Licença MIT](LICENSE).
-
 ---
 
-Desenvolvido por **Arthur Franklin**.
+Desenvolvido por **Arthur Franklin** · [Read in English](README.md) · [Licença MIT](LICENSE)
