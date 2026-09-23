@@ -2,8 +2,6 @@
 
 Local-first document processing suite for Windows, built with Python.
 
-[Português](README.pt-BR.md)
-
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=flat&logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=flat)
 ![License](https://img.shields.io/badge/License-MIT-2EA44F?style=flat)
@@ -155,10 +153,6 @@ Development follows an incremental approach, prioritizing a stable foundation be
 - **Incremental development** — Features are introduced as the underlying platform matures.
 - **Open source** — Development remains transparent and documented.
 
-## License
-
-ForgeDocs is distributed under the [MIT License](LICENSE).
-
 ---
 
-Developed by **Arthur Franklin**.
+Developed by **Arthur Franklin** · [Português](README.pt-BR.md) · [MIT License](LICENSE)
