@@ -76,11 +76,20 @@ ForgeDocs/
 ├── app/
 │   ├── core/
 │   ├── services/
-│   └── ui/
+│   ├── ui/
+│   │   ├── components/
+│   │   ├── data/
+│   │   ├── pages/
+│   │   └── resources/
+│   └── application.py
 ├── assets/
-├── docs/
-├── tests/
+│   ├── fonts/
+│   ├── icons/
+│   └── images/
 ├── config/
+├── docs/
+├── scripts/
+├── tests/
 ├── main.py
 ├── requirements.txt
 └── README.md
